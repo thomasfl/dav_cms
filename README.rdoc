@@ -1,9 +1,14 @@
-= dav_cms
+= DAV::CMS
 
-Description goes here.
+Utilities for managing content in Content Management Systems with WebDAV interface.
+
+== What's it for?
+
+It's main purpose is to be able to publish content to the "Vortex CMS":http://www.usit.uio.no/it/vortex/
+But it should be easily extended to work with other Content Management Systems.
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a

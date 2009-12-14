@@ -10,6 +10,8 @@ begin
     gem.email = "thomas.flemming@usit.uio.no"
     gem.homepage = "http://github.com/thomasfl/dav_cms"
     gem.authors = ["Thomas Flemming"]
+    gem.files.include %w(lib/dav_cms/vortex.rb lib/dav_cms/vortex/resources.rb)
+    gem.add_dependency "net_dav", ">= 0.4.0"
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
