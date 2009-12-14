@@ -1,0 +1,11 @@
+module DAV
+
+  class Vortex
+
+    def initialize(uri)
+
+    end
+
+  end
+
+end
