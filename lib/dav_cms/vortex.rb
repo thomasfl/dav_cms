@@ -11,6 +11,14 @@ module DAV
       return @dav
     end
 
+    def credentials(user,pass)
+      @dav.credentials(user, pass)
+    end
+
+    def cd(uri)
+      @dav.cd(uri)
+    end
+
     def exists?(url)
       uri = URI.parse(url)
       # @dav = connect(url)
@@ -46,7 +54,33 @@ module DAV
     end
 
     def publish(object)
-      puts "DEBUG: publish object: " + object.Class.to_s
+      puts "DEBUG: publish object: " + object.class.to_s
+      props = object.dav_properties
+      content = object.dav_content
+      puts props + " " + content
+    end
+
+  end
+
+end
+
+
+module Vortex
+
+  class StructuredArticle
+
+    attr_accessor :title, :introduction, :content, :filename, :modifiedDate, :publishedDate, :owner, :url
+
+    def initialize(options={})
+      options.each{|k,v|send("#{k}=",v)}
+    end
+
+    def dav_properties
+      "<xml todo>"
+    end
+
+    def dav_content
+      "<html todo>"
     end
 
   end
